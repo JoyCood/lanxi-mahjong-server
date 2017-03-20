@@ -1,0 +1,100 @@
+{
+	"pao":1,     
+	"dealer":3,     
+	"seat1":{             
+		"hu":"HU,ZIMO",
+		"cards":"W2,W5,W6,W6,W7,W8,W9",
+		"pong": {  
+			"seat":"2,3", 
+			"card":"W1,W3"
+		},
+		"chow": {  
+			"seat":"", 
+			"card":""
+		},
+		"mingKong": {  
+			"seat":"", 
+			"card":""
+		},
+		"anKong": {   
+			"seat":"",
+			"card":""
+		},
+		"buKong": {
+			"seat":"",
+			"card":""
+		}
+	},
+	"seat2":{
+		"hu":"",
+		"cards":"W1,W6,W8,T1,T2,B5,B7",
+		"pong": {  
+			"seat":"", 
+			"card":""
+		},
+		"chow": {  
+			"seat":"1,1", 
+			"card":"T1,T2,T3,Z1,Z2,Z4"
+		},
+		"mingKong": {  
+			"seat":"", 
+			"card":""
+		},
+		"anKong": {   
+			"seat":"",
+			"card":""
+		},
+		"buKong": {
+			"seat":"",
+			"card":""
+		}
+	},
+	"seat3":{
+		"hu":"",
+		"cards":"T2,T3,T4,B6",
+		"pong": {  
+			"seat":"1,4", 
+			"card":"B2,T5"
+		},
+		"chow": {  
+			"seat":"2", 
+			"card":"B1,B2,B3"
+		},
+		"mingKong": {  
+			"seat":"", 
+			"card":""
+		},
+		"anKong": {   
+			"seat":"",
+			"card":""
+		},
+		"buKong": {
+			"seat":"",
+			"card":""
+		}
+	},
+	"seat4":{
+		"hu":"",
+		"cards":"W3,W4,W4,W5,W5,B3,B4",
+		"pong": {  
+			"seat":"2", 
+			"card":"F1"
+		},
+		"chow": {  
+			"seat":"3", 
+			"card":"Z1,Z2,Z3"
+		},
+		"mingKong": {  
+			"seat":"", 
+			"card":""
+		},
+		"anKong": {   
+			"seat":"",
+			"card":""
+		},
+		"buKong": {
+			"seat":"",
+			"card":""
+		}
+	}
+}

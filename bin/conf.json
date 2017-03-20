@@ -1,0 +1,23 @@
+{
+	"discard_timeout":12,
+	"operate_timeout":10,
+	"trusteeship_timeout":1,
+
+	"image_dir":"./image",
+	"image_port":6006,
+	"feedback_image_dir":"./feedback",
+	"feedback_image_port":6007,
+	
+	"db_addr":"119.29.24.17:2225",
+	"server_host":"119.29.24.17",
+	"server_port":8005,
+	"pprof_port":9005,
+	"web_port":8086,
+	"pay_port":7005,
+	"pay_wx_pattern":"/mahjong/wxpay/notice",
+	"pay_iapp_pattern":"/mahjong/iapppay/notice",
+	"share_addr":"http://www.mhycmj.com/share/index.htm",
+
+	"server_id":1,
+	"version":"1.0.1"
+}

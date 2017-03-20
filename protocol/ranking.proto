@@ -1,0 +1,75 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+// 排行榜
+package protocol;
+import "vo.proto";
+
+// 每周一凌晨4点更新总财富榜
+message CRankCoin
+{
+	optional uint32 code = 1 [default = 6000];//协议号
+}
+//每个帮排名前100(列表长度有可能排不到100),前端自己遍历rank列表获取自己的排行数据，如果没有找到则不上榜，以下排行同理
+message SRankCoin
+{
+	optional uint32 code = 1 [default=6000];//协议号
+	repeated RankCoin rank= 2;
+	required uint32 coin= 3; // 自己的总金币
+	required uint32 drawed = 4; //0:未进榜不能领取 1：已领取，2：未领取
+	optional uint32 error= 5 [default = 0]; // 错误码
+}
+
+// 每日凌晨4点更新昨日赢得金排行
+message CRankGainCoin
+{
+	optional uint32 code = 1 [default = 6001];//协议号
+}
+message SRankGainCoin
+{
+	optional uint32 code = 1 [default=6001];//协议号
+	repeated RankCoin rank= 2;
+	required int32 coin= 3;  // 昨天金币赢亏
+	required uint32 drawed = 4;
+
+	optional uint32 error= 5 [default = 0]; // 错误码
+}
+// 每周一凌晨4点更新胜局排行
+message CRankWin
+{
+	optional uint32 code = 1 [default = 6002];//协议号
+}
+message SRankWin
+{
+	optional uint32 code = 1 [default=6002];//协议号
+	repeated RankWin rank= 2;
+	required uint32 win= 3;
+	required uint32 drawed = 4;
+
+	optional uint32 error= 5 [default = 0]; // 错误码
+}
+// 每周一凌晨4点更新经验排行
+message CRankExp
+{
+	optional uint32 code = 1 [default = 6003];//协议号
+}
+message SRankExp
+{
+	optional uint32 code = 1 [default=6003];//协议号
+	repeated  RankExp rank= 2;
+	required uint32 exp= 3;
+	required uint32 drawed = 4;
+
+	optional uint32 error= 5 [default = 0]; // 错误码
+}
+//  排行榜奖励
+message CRankRewards
+{
+	optional uint32 code = 1 [default = 6005];//协议号
+	required uint32 kind= 2;  // 排行榜奖励表对应的排行榜类型
+}
+message SRankRewards
+{
+	optional uint32 code = 1 [default=6005];//协议号
+	required uint32 kind= 2;  // 排行榜奖励表对应的排行榜类型
+	required uint32 rewards= 3;  // 奖励表对应的id ,具体道具物品，统一道具更改接口推送，先推送物品，再调用本接口
+	optional uint32 error= 4 [default = 0]; // 错误码
+}

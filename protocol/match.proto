@@ -1,0 +1,100 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+// 比赛场协议 
+package protocol; 
+import "vo.proto";
+// 报名加入比赛
+message CJoinMatchGame
+{ 
+	optional uint32 code = 1 [default = 8001];//协议号
+	required uint32 kind= 2;  // 请求的场次id,在系统配置请求接口返回,所有赛场列表
+}  
+
+message SJoinMatchGame
+{ 
+	optional uint32 code = 1 [default = 8001];//协议号
+	required uint32 id= 2;  // 比赛场的唯一识别
+	required uint32 kind= 3;  // 比赛场类型的唯一识别
+	required uint32 playernum= 4;  // 比赛场目前人数
+	optional uint32 error= 5 [default = 0]; // 错误码 
+}  
+
+// // 比赛场每局更新排行
+// message SMatchGameover
+// { 
+// 	optional uint32 code   = 1 [default = 8002];//协议号
+// 	required string userid = 2;  // 玩家id
+// 	required uint32 rank   = 3;  // 排名
+// 	required uint32 score  = 4;  // 当前积分
+// 	required bool   die    = 5;  // 是否淘汰
+// }
+
+// 比赛场结束返回排行数据
+message SMatchAllOver
+{ 
+	optional uint32 code   = 1 [default = 8003];//协议号
+	required string userid = 2;  // 玩家id
+	required uint32 rank   = 3;  // 排名
+	required int32  score  = 4;  // 当前积分
+}
+
+// 获取比赛场当前报名人数
+message CUpdatePersonNum
+{ 
+	optional uint32 code = 1 [default = 8004];//协议号
+	required uint32 kind = 2;  // 比赛场类型的唯一识别
+}
+
+// 更新比赛场当前人数
+message SUpdatePersonNum
+{ 
+	optional uint32 code      = 1 [default = 8004];//协议号
+	required uint32 id        = 2;  // 比赛场的唯一识别
+	required uint32 playernum = 3;  // 比赛场目前人数
+}
+
+// 赛事未开始前,可以退出报名
+message CMatchExit
+{ 
+	optional uint32 code = 1 [default = 8005];//协议号
+}
+
+message SMatchExit
+{ 
+	optional uint32 code = 1 [default = 8005];//协议号
+	optional uint32 error= 2 [default = 0]; // 错误码 
+}
+
+// 更新比赛场的排名
+message CUpdateRank
+{ 
+	optional uint32 code     = 1 [default = 8006];//协议号
+	required uint32 id       = 2;  // 比赛场的唯一识别
+}
+
+// 更新比赛场的排名
+message SUpdateRank
+{ 
+	optional uint32 code     = 1 [default = 8006];//协议号
+	required uint32 id       = 2;  // 比赛场的唯一识别
+	repeated MatchRank rank  = 3;  //
+	required uint32 num      = 4;  // 比赛场第几轮
+}
+
+message MatchRank
+{ 
+    required uint32 rank     = 1;  // 排名
+    required string userid   = 2;  // 玩家id
+    required string nickname = 3;  // 名字
+    required int32  score    = 4;  // 当前积分
+    required bool   die      = 5;  // 是否淘汰
+}
+
+// 比赛开始玩家进入房间
+message SMatchComein
+{ 
+    optional uint32 code = 1 [default = 8007];//协议号
+    required uint32 Position= 2;  // 玩家座位号
+    required ProtoRoom room= 3;  //房间信息 
+    repeated ProtoUser userinfo= 4;// 已在房间的其他玩家基础信息
+    optional uint32 error= 5 [default = 0]; // 错误码
+}  

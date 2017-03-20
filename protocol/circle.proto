@@ -1,0 +1,83 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+// 朋友圈协议
+package protocol; 
+import "vo.proto";
+  
+
+// 创建房间
+message CCreateRoom
+{ 
+	optional uint32 code = 1 [default = 3003];//协议号
+	// required uint32 expire = 2;  //牌局设定的过期时间(牌局存在的时间单位/秒)
+	required uint32 round = 2;  //牌局数
+	required uint32 rtype= 3;  //房间类型,里面定义低注等 
+	required uint32 audience= 4;// 是否允许旁观 
+	required uint32 pub= 5;// 是否同圈公开 
+	required uint32 updownji= 6;// 是否有上下鸡 
+	required uint32 horse= 7;// 是否玩家可以买码
+	required uint32 cid= 8;// 圈子id
+	required string rname= 9;//  房间名字
+}
+
+// 返回房间数据,
+message SCreateRoom
+{ 
+	optional uint32 code = 1 [default = 3003];//协议号
+	required RoomData rdata = 2; //
+	optional uint32 error= 3 [default = 0]; // 错误码 
+}
+
+// 同圈子的玩家创建房间返回房间数据,广播给圈子在线玩家
+message SOtherCreateRoom
+{ 
+	optional uint32 code = 1 [default = 3005];//协议号
+	required RoomData rdata = 2; //
+}
+
+
+// 获取房间人数 
+message CUpdateRoomPerson
+{ 
+	optional uint32 code = 1 [default = 3026];//协议号
+	required string invitecode= 2; //房间邀请码,每个私人局房间都有一个唯一的邀请码
+}
+message SUpdateRoomPerson
+{ 
+	optional uint32 code = 1 [default = 3026];//协议号
+	required string invitecode= 2; //房间邀请码,每个私人局房间都有一个唯一的邀请码
+	required uint32 rid= 3; // 房间id
+	required uint32 count= 4; // 房间 人数 
+	optional uint32 error= 5 [default = 0]; // 错误码 
+}
+
+
+// 指定圈子自己参与的前50个房间的牌局记录
+message CPrivateCircleRecord
+{ 
+	optional uint32 code = 1 [default = 3035];//协议号
+	required uint32 cid= 2; // 圈子id
+}
+message SPrivateCircleRecord
+{ 
+	optional uint32 code = 1 [default = 3035];//协议号
+	required uint32 cid= 2; // 圈子id
+	required int32 coin= 3; // 玩家的总输赢
+	repeated PrivateRecordForCircle data= 4; // 
+	optional uint32 error= 5 [default = 0]; // 错误码 
+}
+
+//  指定房间牌局记录
+message CPrivateRoomRecord
+{ 
+	optional uint32 code = 1 [default = 3036];//协议号
+	required uint32 cid= 2; // 圈子ID
+	required uint32 rid= 3; // 房间id
+}
+message SPrivateRoomRecord
+{ 
+	optional uint32 code = 1 [default = 3036];//协议号
+	required uint32 cid= 2; // 圈子ID
+	required uint32 rid= 3; //房间id 
+	repeated PrivateRecordForRoom data= 4; // 
+	optional uint32 error= 5 [default = 0]; // 错误码 
+}

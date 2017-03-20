@@ -1,0 +1,45 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+package protocol;
+
+// 获取玩家所有已经开始的任务，有进度的任务
+message CTask
+{
+	optional uint32 code = 1 [default = 7502];//协议号
+
+}
+
+message ProtoTask
+{
+	required uint32 id= 1;      // 任务ID
+	required uint32 kind=2;     // 1每日2主线3每周
+	required uint32 count=3;    // 任务进度
+	required uint32 rewards=4;  // 0没领取1已领取
+}
+
+message STask
+{
+	optional uint32 code = 1 [default = 7502];//协议号
+	repeated ProtoTask task= 2;  //
+	optional uint32 error= 3 [default = 0]; // 错误码
+}
+
+message CGetTaskRewards
+{
+	optional uint32 code = 1 [default = 7503];//协议号
+	required uint32 id= 2;  //  任务id
+}
+
+message SGetTaskRewards
+{
+	optional uint32 code = 1 [default = 7503];//协议号
+	required ProtoTask task= 2;  // 更新被领取奖励的任务数据
+	required uint32 rewards= 3;  // 如果成功领取奖励,rewards  为奖励表id
+	optional uint32 error= 4 [default = 0]; // 错误码
+}
+
+// 任务更新
+message SUpdateTask
+{
+	optional uint32 code = 1 [default = 7505];//协议号
+	repeated ProtoTask task= 2;  //
+}

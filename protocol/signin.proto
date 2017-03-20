@@ -1,0 +1,44 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+package protocol;
+// 玩家每日连续签到
+message CSign
+{
+	optional uint32 code = 1 [default = 7901];//协议号
+}
+message SSign
+{
+	optional uint32 code = 1 [default = 7901];//协议号
+	required uint32 total= 2;  //连续签到的天数
+	required uint32 acc= 3;  // 累积签到天数
+	required uint32 history= 4;  // 签到历史纪录,这是32位无符号整形 ，每个二进制位（1-32位）代表 本月（1-31天 ）的签到情况 .0：没签到，1：签到 。根据当日日期天数，按移位取出 .玩家登陆时服务器 向客户端同步当下服务器系统的Unix时间戳
+	optional uint32 error= 5 [default = 0]; // 错误码
+}
+// 玩家获取已经签到的天数
+message CSignDay
+{
+	optional uint32 code = 1 [default = 7902];//协议号
+}
+message SSignDay
+{
+	optional uint32 code = 1 [default = 7902];//协议号
+	required uint32 total= 2;  //连续签到的天数
+	required uint32 acc= 3;  // 累积签到天数
+	required bool accrewards= 4;  // 是否已经领取累计奖励
+	required bool totalrewards= 5;  // 是否已经领取连续奖励
+	required uint32 history= 6;  // 签到历史纪录,这是32位无符号整形 ，每个二进制位（1-32位）代表 本月（1-31天 ）的签到情况 .0：没签到，1：签到 。根据当日日期天数，按移位取出 .玩家登陆时服务器 向客户端同步当下服务器系统的Unix时间戳
+	required uint32 times= 7;  // 可补签次数
+	optional uint32 error= 8 [default = 0]; // 错误码
+}
+//  补签
+message CReSign
+{
+	optional uint32 code = 1 [default = 7904];//协议号
+}
+message SReSign
+{
+	optional uint32 code = 1 [default = 7904];//协议号
+	required uint32 total= 2;  //连续签到的天数
+	required uint32 acc= 3;  // 累积签到天数
+	required uint32 history= 4;  // 签到历史纪录,这是32位无符号整形 ，每个二进制位（1-32位）代表 本月（1-31天 ）的签到情况 .0：没签到，1：签到 。根据当日日期天数，按移位取出 .玩家登陆时服务器 向客户端同步当下服务器系统的Unix时间戳
+	optional uint32 error= 5 [default = 0]; // 错误码
+}

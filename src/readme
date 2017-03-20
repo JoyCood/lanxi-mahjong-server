@@ -1,0 +1,39 @@
+代码目录功能简介：
+
+admin 		-- 后台管理系统
+algo  		-- 麻将核心算法
+basic 		-- 通用的基础库
+	csv 		-- 用于解析csv表的基础库
+	event 		--	实现了简单的事件机制
+	imageserver --	游戏头像web服务器
+	iplocation 	--	根据玩家IP定位玩家的物理地址
+	rpc 		--	RPC服务端和客户端的封装
+	scribe_client 	--	feedbook 出品的开源分布式日志服客户端
+	socket			--	websocket通讯基础库，对websocket封装了，连接池、包序、半包粘包处理、最大连接数限制、削封、事件通知等功能。
+	ssdb 			--	SSDB 数据库客户端
+	thrift 			--	scribe_client依赖的thrift协议库
+	utils 			--	通用的工具库
+	
+constan		-- 游戏所有数据常量和事件类型常量
+csv			-- 游戏csv格式表映射
+data		-- 对数据库数据映射和存取，只处理对数据的存取，游戏逻辑等非关数据存取逻辑代码不要放入本目录
+errorcode	-- 前端请求异常的错误号和对应的错误信息
+inter		-- 游戏所有接口文件
+logcenter	-- scribe日志服客户端
+
+matchrequest	-- 处理比赛场客户端请求
+matchroom		-- 比赛场模块，比赛场房间列表等有关比赛场的逻辑
+protocol		-- protobuf协议生成的go协议代码
+resource		-- 处理游戏内经济资源更新
+robots			-- 机器人
+room			-- 所有房间打牌逻辑，只处理打牌逻辑，非打牌逻辑不要放入本目录
+roomlist		-- 自由场和私人局房间列表
+roomrequest		-- 处理房间打牌逻辑客户端请求
+socialrequest	-- 处理私人局客户端请求
+sys				-- 游戏各个系统模块，比如：签到，反馈，登录等。
+  
+
+admin.go		-- 后台管理系统主文件
+robot.go		-- 机器人主文件
+server.go		-- 麻将逻辑服务器主文件
+website.go		-- 官网web服务器主文件

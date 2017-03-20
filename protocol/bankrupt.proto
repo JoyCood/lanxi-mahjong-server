@@ -1,0 +1,16 @@
+// 约定：首字母为C是客户端请求协议，首字母为S是服务器返回协议，其他为嵌套结构体
+package protocol; 
+// 玩家破产领取救济金
+message CBankrupt
+{ 
+	optional uint32 code = 1 [default = 7801];//协议号
+}
+// 如果今天的所有救济金已经领取完或者没达到领取条件,error字段会返回错误号
+message SBankrupt
+{ 
+	optional uint32 code = 1 [default = 7801];//协议号
+	required uint32 count= 2;  //今天第几次领取破产救济金
+	required uint32 coin= 3;  //本次领取救济金金额,本字段的金额只作为提示,玩家的资源变动,客户端要监听5000号协议同步变动后的资源数量
+	optional uint32 error= 4 [default = 0]; // 错误码 
+}
+

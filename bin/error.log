@@ -1,0 +1,95 @@
+ERROR: logging before flag.Parse: I0114 09:36:14.367671   19676 activity_csv.go:52] 活动表： 3
+ERROR: logging before flag.Parse: I0114 09:36:14.367791   19676 bankrupt.go:49] 破产表： 3 3
+ERROR: logging before flag.Parse: I0114 09:36:14.368142   19676 match_csv.go:78] 比赛房间表： 6
+ERROR: logging before flag.Parse: I0114 09:36:14.368232   19676 rank_rewards.go:55] 排行榜奖励表： 12
+ERROR: logging before flag.Parse: I0114 09:36:14.368433   19676 rewards_csv.go:48] 奖励： 55
+ERROR: logging before flag.Parse: I0114 09:36:14.368569   19676 room_csv.go:63] 房间表: 16
+ERROR: logging before flag.Parse: I0114 09:36:14.368702   19676 shop_csv.go:45] shop表： 15
+ERROR: logging before flag.Parse: I0114 09:36:14.368752   19676 social_csv.go:49] 圈子表： 4
+ERROR: logging before flag.Parse: I0114 09:36:14.368927   19676 task_csv.go:57] 任务表： 27
+ERROR: logging before flag.Parse: I0114 09:36:14.369151   19676 widget_csv.go:49] 道具表： 13
+E0114 09:42:01.824750   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:43:11.789450   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:45:19.506795   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:46:43.996511   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:47:38.804894   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:50:21.088100   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:54:56.104468   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:54:58.005564   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 09:57:04.563087   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:03:55.097495   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:04:12.869633   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:06:35.564215   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:07:15.708707   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:07:25.441693   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:09:40.586048   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:09:41.577746   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:09:43.683228   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:12:48.432749   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:12:53.289387   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:14:37.885706   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:16:10.871017   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:16:58.829810   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:28:22.399347   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:30:03.844837   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:33:10.460379   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:33:37.605643   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:36:06.428589   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:36:26.316960   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:43:57.757777   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:58:07.925949   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 10:59:20.184904   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 11:04:01.162253   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:44:41.972103   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:46:10.372422   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:50:14.710049   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:55:16.576560   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:56:19.734614   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:57:06.055213   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 12:58:28.094216   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 13:02:12.534479   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:05:21.938700   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:07:35.180228   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:07:48.524192   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:08:39.830025   19676 login.go:37] goroutine 343 [running]:
+runtime/debug.Stack(0xc42048f750, 0x8585a0, 0xc4200100d0)
+	/mydata/go/src/runtime/debug/stack.go:24 +0x79
+req.login.func1()
+	/home/wangpiaohua/server3/src/req/login.go:37 +0x48
+panic(0x8585a0, 0xc4200100d0)
+	/mydata/go/src/runtime/panic.go:458 +0x243
+data.(*User).Get(0x0, 0xc4203d6778, 0x0)
+	/home/wangpiaohua/server3/src/data/user.go:46 +0x7c
+req.login(0xc4202e62c0, 0xb03420, 0xc420238480)
+	/home/wangpiaohua/server3/src/req/login.go:63 +0x217
+reflect.Value.call(0x83d7e0, 0x9220f8, 0x13, 0x8e144a, 0x4, 0xc42048fec0, 0x2, 0x2, 0xc4202e62c0, 0x8cfba0, ...)
+	/mydata/go/src/reflect/value.go:434 +0x5c8
+reflect.Value.Call(0x83d7e0, 0x9220f8, 0x13, 0xc42048fec0, 0x2, 0x2, 0x0, 0x9224a0, 0xc420061000)
+	/mydata/go/src/reflect/value.go:302 +0xa4
+basic/socket.proxyHandle(0x3e8, 0xc4202e6289, 0x2e, 0x37, 0xc420238480)
+	/home/wangpiaohua/server3/src/basic/socket/proxy.go:44 +0x3cb
+basic/socket.(*Connection).Reader(0xc420238480, 0xc4204787e0)
+	/home/wangpiaohua/server3/src/basic/socket/connection.go:158 +0xef
+created by basic/socket.wSHandler
+	/home/wangpiaohua/server3/src/basic/socket/net.go:74 +0x2a9
+
+E0114 14:08:44.769541   19676 connection.go:194] ReadMessage error  read tcp 10.251.164.40:8005->119.137.53.40:27887: use of closed network connection
+E0114 14:09:24.741538   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:35:26.868544   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:39:04.865133   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:52:02.339206   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:57:55.111721   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:59:41.917918   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:59:46.424323   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:59:52.824525   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 14:59:57.661966   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:00:43.804456   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:00:58.957783   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:02:32.550798   19676 connection.go:194] ReadMessage error  read tcp 10.251.164.40:8005->119.137.53.40:26492: i/o timeout
+E0114 15:05:39.339227   19676 connection.go:194] ReadMessage error  read tcp 10.251.164.40:8005->119.137.53.40:27067: i/o timeout
+E0114 15:08:01.896571   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:09:08.881414   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:10:59.569720   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:13:22.123395   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:16:06.605305   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
+E0114 15:16:10.133596   19676 connection.go:194] ReadMessage error  websocket: close 1006 (abnormal closure): unexpected EOF
